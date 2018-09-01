@@ -1,6 +1,6 @@
 #Importa gráfico forçando tipo numérico na coluna tarifa
-jun17 <- read.csv('201706.csv', colClasses=c("TARIFA"="numeric"), sep = ";", header = TRUE)
-jun18 <- read.csv('201806.csv', colClasses=c("TARIFA"="numeric"), sep = ";", header = TRUE)
+jun17 <- read.csv('class-2/201706.csv', colClasses=c("TARIFA"="numeric"), sep = ";", header = TRUE)
+jun18 <- read.csv('class-2/201806.csv', colClasses=c("TARIFA"="numeric"), sep = ";", header = TRUE)
 
 #Média
 mean17 <- mean(jun17$TARIFA)

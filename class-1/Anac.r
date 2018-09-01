@@ -1,5 +1,5 @@
-file1 <- read.csv(file = file.path(getwd(), "data/vra_062017.csv"), sep = ";", header = FALSE)
-file2 <- read.csv(file = file.path(getwd(), "data/vra_062018.csv"), sep = ";", header = FALSE)
+file1 <- read.csv(file = file.path(getwd(), "class-1/vra_062017.csv"), sep = ";", header = FALSE)
+file2 <- read.csv(file = file.path(getwd(), "class-1/vra_062018.csv"), sep = ";", header = FALSE)
 data <- rbind(file1, file2)
 summary1 <- summary(file1)
 summary2 <- summary(file2)
