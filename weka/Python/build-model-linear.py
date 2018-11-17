@@ -6,17 +6,17 @@ from sklearn import metrics
 from sklearn.externals import joblib
 
 dataset = pd.read_csv("./csv-data.csv")
+# print(dataset.describe())
 datetime = pd.to_datetime(dataset["Date"], format="%Y-%m-%d")
 dataset["Date"] = datetime.dt.year + datetime.dt.month + datetime.dt.day
-X = dataset.iloc[:, 1:6].values
-y = dataset.iloc[:, 6].values
+X = dataset.iloc[:, 1:5].values
+y = dataset.iloc[:, 5].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
-print("Coefficients:", regressor.coef_)
 print("Mean Absolute Error:", metrics.mean_absolute_error(y_test, y_pred))
 print("Mean Squared Error:", metrics.mean_squared_error(y_test, y_pred))
 print("Root Mean Squared Error:", np.sqrt(

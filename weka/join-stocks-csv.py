@@ -5,7 +5,7 @@ import csv
 folder = "./Stocks"
 outputFile = csv.writer(open("Python/csv-data.csv", "w"))
 outputFile.writerow(
-    ["Company", "Date", "Open", "High", "Low", "Volume", "Close"])
+    ["Company", "Date", "Open", "High", "Low", "Close"])
 
 for f in os.listdir(folder):
     print(f)
@@ -18,7 +18,6 @@ for f in os.listdir(folder):
             row[1],
             row[2],
             row[3],
-            row[5],
             row[4],
         ])
 
