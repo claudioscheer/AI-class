@@ -8,8 +8,8 @@ from sklearn.externals import joblib
 dataset = pd.read_csv("./csv-data.csv")
 datetime = pd.to_datetime(dataset["Date"], format="%Y-%m-%d")
 dataset["Date"] = datetime.dt.year + datetime.dt.month + datetime.dt.day
-X = dataset.iloc[:, 0:5].values
-y = dataset.iloc[:, 5].values
+X = dataset.iloc[:, 1:6].values
+y = dataset.iloc[:, 6].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 regressor = LinearRegression()
