@@ -8,11 +8,10 @@ outputFile = open("output.arff", "w")
 outputFile.write("""@relation stock
 
 @attribute Date date "yyyy-MM-dd"
+@attribute Open numeric
 @attribute High numeric
 @attribute Low numeric
 @attribute Close numeric
-@attribute Volume numeric
-@attribute Open numeric
 
 @data
 """)
@@ -26,11 +25,10 @@ for f in os.listdir(folder):
             outputFile.write(",".join([
                 # f[:-4],
                 row[0],
+                row[1],
                 row[2],
                 row[3],
                 row[4],
-                row[5],
-                row[1],
             ]) + "\n")
     except:
         print("*****************")
