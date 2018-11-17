@@ -6,6 +6,7 @@ mochila <- data.frame(item = c("canivete", "feijao", "batatas", "lanterna",
 #funcao de adaptacao
 f <-function(x)
 {
+  print(x)
   pontos = 0
   peso = 0
   for (i in 1:7)

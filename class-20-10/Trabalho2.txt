@@ -1,0 +1,26 @@
+TRABALHO II
+
+MACHINE LEARNING
+
+- Baseado no exemplo app.R, que é uma aplicação em Shiny 
+que avalia o risco para a concessão de seguros, deve ser
+escolhidos os seguintes items para o projeto.
+	* Um assunto/base de dados, que não faça parte das bases básicas do weka/R.
+	* Uma solução/algoritmo de machine learning adequada ao problema.
+
+- A solução deve ser implantada em R utilizando a biblioteca Shiny.
+
+- Shiny, Pacote do R para criar aplicações Web. 
+Comporta qualquer outro pacote do R e pode ser hospedado
+gratuitamente em shinyapps.io.
+
+
+- Publicar na Web é opcional, porém, é uma atividade interessante
+para usar o shinyapps.io é necessário instalar o pacote rsconnect.
+Também autorizar a conta, Token e Senha.
+
+- Também é possível configurar um servidor Shiny em localhost.
+
+- O trabalho ainda não tem data de entrega, mas para a próxima semana,
+seria o ideal que já houvesse um dataset construído e um algoritmo escolhido.
+Assim podemos continuar com o conteúdo.
