@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url,float}
+
+%\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+
+     
+\sloppy
+
+\title{Inception Network on TensorFlow}
+
+\author{Luciana P. Nedel\inst{1}, Rafael H. Bordini\inst{2}, Flávio Rech
+  Wagner\inst{1}, Jomi F. Hübner\inst{3} }
+
+
+\address{Instituto de Informática -- Universidade Federal do Rio Grande do Sul
+  (UFRGS)\\
+  Caixa Postal 15.064 -- 91.501-970 -- Porto Alegre -- RS -- Brazil
+\nextinstitute
+  Department of Computer Science -- University of Durham\\
+  Durham, U.K.
+\nextinstitute
+  Departamento de Sistemas e Computação\\
+  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
+  \email{\{nedel,flavio\}@inf.ufrgs.br, R.Bordini@durham.ac.uk,
+  jomi@inf.furb.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+  This meta-paper describes the style to be used in articles and short papers
+  for SBC conferences. For papers in English, you should add just an abstract
+  while for the papers in Portuguese, we also ask for an abstract in
+  Portuguese (``resumo''). In both cases, abstracts should not have more than
+  10 lines and must be in the first page of the paper.
+\end{abstract}
+
+
+\section{General Information}
+
+According to~\cite{tensorflow2015-whitepaper}, TensorFlow is a project released by Google in November 2015. The main objective of TensorFlow is to facilitate the use of machine learning due to the algorithms complexity.
+
+Some classes of algorithms can have a better result in some situations, but it is not a rule. There may be variations according to the data or the results expected. So, programmers have to try different implementations, with different pamameters, to achive the best solution. TensorFlow can abstract it, offering a set of algortimhs from different machine learning approaches, and some pre-built data set.
+
+TensorFlow also provides a set of pre-trained models. In addition to abstracting the algorithms, it abstract the model training phase. It is helpful because the training phase requires a large processing power. The processing power, generally, consists of GPUs because of its particular characteristics on solving math problems.
+
+The current paper uses a pre-trained model powered by TensorFlow. The model uses the Inception approuch to classify images, and was trained over the data set used on ImageNet 2012 Challenge. According to~\cite{imagenet}, the data set consisted of 10,000,000 labeled images depicting more than 10,000 object categories.
+
+The objective of this paper is to try different images, some taken by the author, over the pre-built model, and analysis how the model performs over this different images.
+
+\section{Resuts}
+
+The images that are shown below was not treated. They are originals.
+
+\subsection{Antiperspirant Aerosol Image}
+
+The Figure~\ref{fig:image1} shows an antiperspirant aerosol. When classifying it with the pre-trained model, the results are not correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.2\textwidth]{images/rexona.jpg}
+\caption{Antiperspirant Aerosol}
+\label{fig:image1}
+\end{figure}
+
+The table above shows the results:
+
+\begin{center}
+  \begin{tabular}{ |c|c|c|c| } 
+  \hline
+  col1 & col2 & col3 \\
+  \hline
+  \multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
+  & cell5 & cell6 \\ 
+  & cell8 & cell9 \\ 
+  \hline
+  \end{tabular}
+  \end{center}
+
+With 13.99\% of accuracy, the result was a hair spray
+
+\section{Conclusion}
+
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
